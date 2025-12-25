@@ -13,7 +13,7 @@ export default function Page() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-40"
         >
-          <source src="/ascet-bg.mp4" type="video/mp4" />
+          <source src="/ascet-bg.mp4.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
