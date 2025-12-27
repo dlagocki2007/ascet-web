@@ -117,6 +117,20 @@ function RoadmapNode({ phase, index }: { phase: RoadmapPhase; index: number }) {
             phase.isCurrent ? "border-white bg-white/5" : "border-white/30 bg-black"
           }`}
         >
+            {/* Halo / ripple for current phase (subtle, slow) */}
+            {phase.isCurrent && (
+              <motion.div
+                aria-hidden
+                initial={{ scale: 0.9, opacity: 0.25 }}
+                animate={{ scale: [0.9, 1.6, 0.9], opacity: [0.18, 0.6, 0.18] }}
+                transition={{ duration: 3.2, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
+                className="absolute -inset-6 rounded-full pointer-events-none"
+                style={{
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 35%, transparent 60%)',
+                  filter: 'blur(18px)'
+                }}
+              />
+            )}
           {/* Inner circle */}
           <div
             className={`w-16 h-16 rounded-full border ${

@@ -100,14 +100,14 @@ export function NewsletterSection() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full px-8 py-4 bg-white text-black font-medium tracking-wider rounded-lg hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Zapisuję...</span>
-                    </>
-                  ) : (
-                    "Zapisz się"
-                  )}
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <span>Trwa…</span>
+                      </>
+                    ) : (
+                      "Zapisz"
+                    )}
                 </motion.button>
               </form>
             </>
@@ -124,12 +124,8 @@ export function NewsletterSection() {
                 </div>
               </div>
 
-              <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Dziękujemy za zapis do ASCET™.</h3>
-              <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-md mx-auto">
-                To Twoja nowa droga do nowego życia.
-                <br />
-                Oczekuj na aktualizacje.
-              </p>
+              <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Zapisany.</h3>
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed max-w-md mx-auto">Teraz cisza i praca.</p>
             </motion.div>
           )}
         </motion.div>
